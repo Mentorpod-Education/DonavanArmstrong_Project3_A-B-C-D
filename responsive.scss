@@ -1,0 +1,41 @@
+//BREAKPOINT
+$mobile-to-tablet: 768px;
+
+$tablet-to-desktop: 1024px;
+
+//MEDIA QUERIES
+
+//Mobile First Media Queries
+@mixin tablet-view-up{
+
+    @media screen and (min-width: $mobile-to-tablet){
+        @content;
+    }
+    
+}
+
+@mixin desktop-view-up{
+    
+    @media screen and (min-width: $tablet-to-desktop){
+        @content;
+    }
+    
+}
+
+//Desktop First Media Queries
+
+@mixin mobile-view-down{
+
+    @media screen and (max-width: $mobile-to-tablet){
+        @content;
+    }
+    
+}
+
+@mixin tablet-view-down{
+    
+    @media screen and (max-width: $tablet-to-desktop){
+        @content;
+    }
+    
+}
